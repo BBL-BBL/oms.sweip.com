@@ -131,6 +131,12 @@ XML;
             $xml = simplexml_load_string($response, "SimpleXMLElement", LIBXML_NOCDATA);
             $jsonString = (string)$xml->xpath('//response')[0];
 
+            curl_close($curl);
+
+            $reference_no = $this->params['reference_no'] ?? "logs";
+            file_put_contents("{$reference_no}.log", $body, FILE_APPEND);
+            file_put_contents("{$reference_no}.log", $response, FILE_APPEND);
+
             // 将 JSON 字符串转换为 PHP 数组
             return json_decode($jsonString, true);
         } catch (\Exception $exception) {
