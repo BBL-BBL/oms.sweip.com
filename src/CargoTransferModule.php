@@ -1,6 +1,10 @@
 <?php
 
-class CargoTransferModule extends \OmsSweip\BasicAPI
+namespace OmsSweip;
+
+require_once 'oms-sweip.php';
+
+class CargoTransferModule extends BasicAPI
 {
     public function __construct($appToken, $appKey)
     {

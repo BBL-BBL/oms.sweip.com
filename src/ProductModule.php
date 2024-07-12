@@ -2,9 +2,9 @@
 
 namespace OmsSweip;
 
-require_once __DIR__ . '/oms-sweip.php';
+require_once 'oms-sweip.php';
 
-class ProductModule extends BasicData
+class ProductModule extends BasicAPI
 {
     public function setProductSku($value) // string(80)	Require	SKU
     {

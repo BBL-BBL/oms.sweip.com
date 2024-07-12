@@ -8,6 +8,7 @@ use OmsSweip\BasicData;
 use OmsSweip\ProductModule;
 use OmsSweip\PublicModules;
 
+
 //use OmsSweip\ApiClient;
 //$client = new ApiClient();
 //
@@ -24,8 +25,8 @@ use OmsSweip\PublicModules;
 //}
 //
 
-$appToken = "";
-$appKey = "";
+$appToken = "fcb27d8f0992176f858e075505bdb70a";
+$appKey = "641354d089d48cc2a5375acb6659a9b6";
 $client = new BasicData($appToken, $appKey);
 var_dump($client->getWarehouse());
 //$client->uploadFile("zip","11323123","order_attach","备注","");

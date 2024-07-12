@@ -2,8 +2,7 @@
 
 namespace OmsSweip;
 
-// 在 BasicData.php 文件顶部添加
-require_once __DIR__ . '/oms-sweip.php';
+require_once 'oms-sweip.php';
 
 class DataMessageSubscription extends BasicAPI
 {
