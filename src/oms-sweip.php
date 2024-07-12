@@ -129,10 +129,7 @@ XML;
             $response = curl_exec($curl);
 
             $reference_no = $this->params['reference_no'] ?? "oms-sweip-logs";
-            file_put_contents("{$reference_no}.log", date("Y-m-d H:i:s"), FILE_APPEND);
-            file_put_contents("{$reference_no}.log", $wsdl, FILE_APPEND);
-            file_put_contents("{$reference_no}.log", $body, FILE_APPEND);
-            file_put_contents("{$reference_no}.log", $response + "\n", FILE_APPEND);
+            file_put_contents("{$reference_no}.log", date("Y-m-d H:i:s") + "\n" + $wsdl + "\n" + $body + "\n" + $response + "\n", FILE_APPEND);
 
             $xml = simplexml_load_string($response, "SimpleXMLElement", LIBXML_NOCDATA);
             $jsonString = (string)$xml->xpath('//response')[0];
