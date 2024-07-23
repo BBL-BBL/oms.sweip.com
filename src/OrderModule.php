@@ -1810,7 +1810,7 @@ class OrderModule extends BasicAPI
      */
     public function getOrderByCode()
     {
-        $this->setService("getReturnOrderList");
+        $this->setService("getOrderByCode");
         return $this->PostSoapXML();
     }
 
